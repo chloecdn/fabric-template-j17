@@ -1,4 +1,4 @@
-# A Fabric Mod-Template for use with Java 20
+# A Fabric Mod-Template for use with Java 17
 
 <h3>How to use:</h3>
 
