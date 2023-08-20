@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+  "name": "Example mod",
+  "description": "This is an example description!",
+  "authors": [
+    "Me!"
+  ],
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+  "environment": "*",
+  "mixins": [
+    "modid.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*"
+  },
+  "accessWidener": "modid.accesswidener"
+}
