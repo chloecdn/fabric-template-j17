@@ -104,6 +104,7 @@ class FinalSetupTask extends DefaultTask {
                     list.add(s.replace("  \"id\": \"modid\",", "  \"id\": \"" + modId + "\",")
                             .replace("  \"name\": \"Example mod\",", "  \"name\": \"" + modName + "\",")
                             .replace("  \"description\": \"This is an example description!\",", "  \"description\": \"" + modDescription + "\",")
+                            .replace("  \"authors\": [ \"Me!\" ],", "  \"authors\": [ \"" + modAuthor + "\" ],")
                             .replace("  \"icon\": \"assets/modid/icon.png\",", "  \"icon\": \"assets/" + modId + "/icon.png\",")
                             .replace("    \"modid.mixins.json\"", "    \"" + modId + ".mixins.json\"")
                             .replace("  \"accessWidener\": \"modid.accesswidener\"", "  \"accessWidener\": \"" + modId + ".accesswidener\"")
