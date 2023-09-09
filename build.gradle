@@ -1,7 +1,5 @@
 import org.apache.commons.io.FileUtils
 
-import java.nio.file.Files
-
 plugins {
     id 'fabric-loom' version '1.3-SNAPSHOT'
     id 'maven-publish'
@@ -95,26 +93,25 @@ class FinalSetupTask extends DefaultTask {
         switch (file.getName()) {
             case "gradle.properties": {
                 lines.forEach { String s ->
-                    list.add(s.replace("group_id=com.example", "group_id=" + groupId).replace("artifact_id=modid", "artifact_id=" + modId))
+                    list.add(s.replace("group_id=com.example", "group_id=" + groupId)
+                            .replace("artifact_id=modid", "artifact_id=" + modId)
+                    )
                 }
                 break
             }
             case "fabric.mod.json": {
                 for (def s in lines) {
-                    list.add(s.replace("  \"id\": \"modid\",", "  \"id\": \"" + modId + "\",")
-                            .replace("  \"name\": \"Example mod\",", "  \"name\": \"" + modName + "\",")
-                            .replace("  \"description\": \"This is an example description!\",", "  \"description\": \"" + modDescription + "\",")
-                            .replace("  \"authors\": [ \"Me!\" ],", "  \"authors\": [ \"" + modAuthor + "\" ],")
-                            .replace("  \"icon\": \"assets/modid/icon.png\",", "  \"icon\": \"assets/" + modId + "/icon.png\",")
-                            .replace("    \"modid.mixins.json\"", "    \"" + modId + ".mixins.json\"")
-                            .replace("  \"accessWidener\": \"modid.accesswidener\"", "  \"accessWidener\": \"" + modId + ".accesswidener\"")
+                    list.add(s.replace("<mod_id>", modId)
+                            .replace("<mod_name>", modName)
+                            .replace("<mod_description>", modDescription)
+                            .replace("<author>", modAuthor)
                     )
                 }
                 break
             }
             case "modid.mixins.json": {
                 for (def s in lines) {
-                    list.add(s.replace("  \"package\": \"com.example.mixin\",", "  \"package\": \"" + groupId + "." + modId + ".mixin\","))
+                    list.add(s.replace("<group_id>.<mod_id>", groupId + "." + modId))
                 }
                 break
             }
