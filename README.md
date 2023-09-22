@@ -5,7 +5,7 @@
 - Create a Repository with the Template with the button at the top-right
 - Clone that Repo into Intellij ("Create Project from VCS")
 - Wait until it's finished loading everything. really. ***everything!***
-- In Intellij, go into the gradle.build, and scroll right to the bottom. you'll find parameters you want to edit like groupId, modId, modName etc etc.
+- In Intellij, go into the build.gradle, and scroll right to the bottom. you'll find parameters you want to edit like groupId, modId, modName etc etc.
 - When you changed them to your liking (make sure modid & groupId are changed, or you will encounter issues with this), reload gradle (reload-icon at the top-right) and run the task `gradle finalSetup`, which will copy these values whereever needed. to be 100% safe, reload the project again afterwards.
 - Enjoy your Mod-Project!
 
