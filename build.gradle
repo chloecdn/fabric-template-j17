@@ -83,6 +83,8 @@ class FinalSetupTask extends DefaultTask {
         FileUtils.moveFile(new File("src/main/resources/modid.accesswidener"), new File("src/main/resources/" + modId + ".accesswidener"))
         FileUtils.moveFile(new File("src/main/resources/modid.mixins.json"), new File("src/main/resources/" + modId + ".mixins.json"))
         project.mkdir "src/main/java/" + groupId.replace(".", "/") + "/" + modId + "/mixin"
+        project.mkdir("src/main/resources/assets/" + modId)
+        FileUtils.moveFile(new File("src/main/resources/icon.png"),  new File("src/main/resources/assets/" + modId + "/icon.png"))
     }
 
     private void replaceConfigs(File file) {
