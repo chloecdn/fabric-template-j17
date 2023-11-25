@@ -97,6 +97,7 @@ class FinalSetupTask extends DefaultTask {
                 lines.forEach { String s ->
                     list.add(s.replace("group_id=com.example", "group_id=" + groupId)
                             .replace("artifact_id=modid", "artifact_id=" + modId)
+                            .replace("mod_version=modVersion", "mod_version=" + modVersion)
                     )
                 }
                 break
