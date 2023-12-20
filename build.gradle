@@ -75,6 +75,9 @@ enum ModState {
     COMPILE_ONLY
 }
 
+// --------------------------------------------------------------------------------------------------------------------------
+// EVERYTHING BELOW THIS (INCLUDING THIS COMMENT) CAN BE DELETED AFTER RUNNING THE TASK.
+// --------------------------------------------------------------------------------------------------------------------------
 class FinalSetupTask extends DefaultTask {
 
 
