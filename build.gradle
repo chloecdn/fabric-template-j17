@@ -1,7 +1,7 @@
 import org.apache.commons.io.FileUtils
 
 plugins {
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.6.9'
     id 'maven-publish'
 }
 
@@ -35,13 +35,13 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 17
+    it.options.release = 21
 }
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
@@ -103,7 +103,7 @@ class FinalSetupTask extends DefaultTask {
         FileUtils.moveFile(new File("src/main/resources/modid.mixins.json"), new File("src/main/resources/" + modId + ".mixins.json"))
         project.mkdir "src/main/java/" + groupId.replace(".", "/") + "/" + modId + "/mixin"
         project.mkdir("src/main/resources/assets/" + modId)
-        FileUtils.moveFile(new File("src/main/resources/icon.png"),  new File("src/main/resources/assets/" + modId + "/icon.png"))
+        FileUtils.moveFile(new File("src/main/resources/icon.png"), new File("src/main/resources/assets/" + modId + "/icon.png"))
     }
 
     private void replaceConfigs(File file) {
