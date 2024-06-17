@@ -1,5 +1,7 @@
 # A Fabric Mod-Template
 
+# CURRENT SUPPORTED VERSION: 1.21
+
 <h3>How to use:</h3>
 
 - Create a Repository with the Template with the button at the top-right
