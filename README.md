@@ -1,6 +1,6 @@
 # A Fabric Mod-Template
 
-# CURRENT SUPPORTED VERSION: 1.21
+# CURRENT SUPPORTED VERSION: 1.21.3
 
 <h3>How to use:</h3>
 
